@@ -1,16 +1,15 @@
-package usecase
+package userUsecases
 
-import "github.com/Natannms/go_sqlc/domain/entities"
-
-type UserRepository interface {
-	Save(user *entities.User) error
-}
+import (
+	"github.com/Natannms/go_sqlc/domain/entities"
+	"github.com/Natannms/go_sqlc/domain/respositories"
+)
 
 type CreateUserUseCase struct {
-	userRepository UserRepository
+	userRepository respositories.UserRepository
 }
 
-func NewCreateUserUseCase(userRepository UserRepository) *CreateUserUseCase {
+func NewCreateUserUseCase(userRepository respositories.UserRepository) *CreateUserUseCase {
 	return &CreateUserUseCase{userRepository: userRepository}
 }
 
