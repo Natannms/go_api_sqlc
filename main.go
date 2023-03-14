@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/Natannms/go_sqlc/internal/db"
+	"github.com/Natannms/go_sqlc/infra/service/db"
 
 	_ "github.com/go-sql-driver/mysql"
 )
